@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Video Proof</title>
+    
+    
+</head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#emma").hide();
+    $("#harry").show();
+  });
+  $("#show").click(function(){
+    $("#emma").show();
+    $("#harry").hide();
+  });
+});
+</script>
+
+
+<body>
+    
+<iframe id="emma" style="display: none" width="560" height="315" src="http://www.youtube.com/embed/bLBSoC_2IY8" frameborder="0" allowfullscreen></iframe>
+<iframe id="harry" width="560" height="315" src="http://www.youtube.com/embed/aKdV5FvXLuI" frameborder="0" allowfullscreen></iframe>
+
+<button id="hide">Emma</button>
+<button id="show">Harry</button>
+</body>
+</html>
