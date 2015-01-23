@@ -3,11 +3,22 @@
 <html>
 <head>
     <title>Video Proof</title>
-    
-    
+
+
 </head>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<body>
+
+<h1>Hold any key for magic</h1>
+
+<iframe id="emma" style="display: none" width="560" height="315" src="http://www.youtube.com/embed/bLBSoC_2IY8?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<iframe id="harry" width="560" height="315" src="http://www.youtube.com/embed/aKdV5FvXLuI?autoplay=1&color=white" frameborder="0" allowfullscreen></iframe>
+
+<!--<button id="hide">Harry</button>
+<button id="show">Emma</button>-->
+
 <script>
 $(document).ready(function(){
   $("#hide").click(function(){
@@ -18,16 +29,15 @@ $(document).ready(function(){
     $("#emma").show();
     $("#harry").hide();
   });
+  $(document).keypress(function(){
+    $("#emma").show();
+    $("#harry").hide();
+  });
+  $(document).keyup(function(){
+    $("#harry").show();
+    $("#emma").hide();
+  });
 });
 </script>
-
-
-<body>
-    
-<iframe id="emma" style="display: none" width="560" height="315" src="http://www.youtube.com/embed/bLBSoC_2IY8" frameborder="0" allowfullscreen></iframe>
-<iframe id="harry" width="560" height="315" src="http://www.youtube.com/embed/aKdV5FvXLuI" frameborder="0" allowfullscreen></iframe>
-
-<button id="hide">Emma</button>
-<button id="show">Harry</button>
 </body>
 </html>
