@@ -11,23 +11,42 @@
 <script>
 $(document).ready(function(){
   $("#hide").click(function(){
-    $("#emma").hide();
-    $("#harry").show();
+    $("#video1").hide();
+    $("#video2").show();
+    $( "#hide" ).click(function() {
+			$( "#video1" ).toggle();
+			$("#video1 iframe").attr('src', $("#video1 iframe").attr('src')+"&autoplay=1");
+		});
   });
   $("#show").click(function(){
-    $("#emma").show();
-    $("#harry").hide();
+    $("#video1").show();
+    $("#video2").hide();
+    $( "#show" ).click(function() {
+			$( "#video2" ).toggle();
+			$("#video2 iframe").attr('src', $("#video2 iframe").attr('src')+"&autoplay=1");
+		});
   });
+ 
+  
 });
+
+
 </script>
 
 
 <body>
     
-<iframe id="emma" style="display: none" width="560" height="315" src="http://www.youtube.com/embed/bLBSoC_2IY8" frameborder="0" allowfullscreen></iframe>
-<iframe id="harry" width="560" height="315" src="http://www.youtube.com/embed/aKdV5FvXLuI" frameborder="0" allowfullscreen></iframe>
+<div id="video1" style="display:none">
+    <iframe src="http://player.vimeo.com/video/95902755?api=1&player_id=player1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe>
+</div>
 
-<button id="hide">Emma</button>
-<button id="show">Harry</button>
+
+<div id="video2">
+    <iframe src="http://player.vimeo.com/video/96276036?api=1&player_id=player2" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+
+<button id="hide">Fishing</button>
+<button id="show">Deadwood</button>
 </body>
 </html>
